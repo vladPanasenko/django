@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Counted!</title>
+</head>
+<body>
+<a href="{% url 'home' %}">Go Back</a>
+<h3>You text has {{sym}} symbols and {{words}} words!</h3>
+<p>Here is the text: {{fulltext}}</p>
+<p>More statistics below:</p>
+{% for w, k in dict %}
+{{w}}  -- {{k}}
+<br/>
+{% endfor %}
+
+</body>
+</html>
